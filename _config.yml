@@ -1,4 +1,5 @@
 # Site settings
+permalink: /blog/:categories/:year/:month/:day/:title.html
 title: Android Fanatic
 email: karthik.rk18@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
@@ -10,3 +11,23 @@ github_username: callmekarthik
 
 # Build settings
 markdown: kramdown
+
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Setup
+tagline:          'A Jekyll theme'
+description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+
+author:
+  name:           'Mark Otto'
+  url:            https://twitter.com/mdo
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/poole/hyde
