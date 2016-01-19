@@ -1,9 +1,11 @@
 ---
 layout: post
-title: Animations using Floating Action Button.
+title: Curved animation of FAB
 ---
 
-**FAB Animations Part1:**<br/>
+**FAB Animations Part 1:**<br/>
+
+
 ![ScreenShot](../img/Blog/fab1.gif)
 
 
@@ -53,5 +55,7 @@ Now here the tricky part would be to reverse animate along the path (same points
  }
 
 Find out more in detail by [visiting the project on GitHub](https://github.com/callmekarthik/AnimationsDemo).
+
+Also do check this old but awesome blog post about curve motion by [Chet Haase](http://graphics-geek.blogspot.com.es/2012/01/curved-motion-in-android.html).
 
 **Note**:this kind of fab animation will be useful when you want to animate the fab in the fragment or maybe inside one single activity without transitions,in case of the activity transition animation please follow my next blog post where we can achive it using transitions by moving from one activity to another.
