@@ -6,7 +6,7 @@ title: FAB to dialog transistion and vice versa.
 **FAB Animations Part 2:**<br/>
 
 
-![ScreenShot](../img/Blog/fab2.gif)
+![ScreenShot](/img/Blog/fab2.gif)
 
 
 In this blog post we are gonna demonstrate transition between two activities,transistion was introduced in material design and as per the doc the definiation goes like this **Activity transitions in material design apps provide visual connections between different states through motion and transformations between common elements**.since we are only interested in shared transistion animations,lets focus on that for the moment.According to the developer website **shared transistion animation decides on how the views are shared during transistion**,including the following 4
@@ -17,6 +17,9 @@ In this blog post we are gonna demonstrate transition between two activities,tra
 **4.changeImageTransform**: change target picture size and scaling.<br/>
 
 shared elements should have one additional attribute  **android:transitionName = ""**
+
+<!--break-->
+
 so before we dive into animation,let's have a brief description about the classes used in the animation.
 
 >**1.MorphFabToDialog.java**:A custom transition that morphs a circle into a rectangle, changing it's background color and extends changeBounds transition.<br/>

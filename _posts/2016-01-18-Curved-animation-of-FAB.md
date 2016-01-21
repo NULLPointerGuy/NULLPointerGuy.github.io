@@ -6,7 +6,7 @@ title: Curved animation of FAB
 **FAB Animations Part 1:**<br/>
 
 
-![ScreenShot](../img/Blog/fab1.gif)
+![ScreenShot](/img/Blog/fab1.gif)
 
 
 In this blog post we are gonna demonstrate on how to achive the above animation.We will split the animation into arc motion animation and circular reveal animation, the arc motion animation is achived based on the concept of [bezire curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve).There is also a sample repo that demonstrates curved motion of [fab](https://github.com/saulmm/Curved-Fab-Reveal-Example), we will be using few classes from the repo and it's brief descriptions are as follows.
@@ -16,10 +16,12 @@ In this blog post we are gonna demonstrate on how to achive the above animation.
 
   >**AnimatorPath.java**:Class that contains the list of pathpoint objects for a given curve,also specifies type motion either discontinous move to ,straight path or curve to motions of the fab to the given point.
 
+<!--break-->
 
   >**PathEvaluator.java**:This evaluator interpolates between two PathPoint values given the value t, the proportion traveled between those points. The value of the interpolation depends on the operation specified by the endValue (the operation for the interval between PathPoints is always specified by the end point of that interval).basically responsible for calculating the cureved bezire path points.
 
 The android co-ordinate system is such that 0,0 is on the top left corner. (0,MaxY) is bottom left and (maxx,maxy) bottom right and right top is (Maxx,0),therfore points for the exponential curve are as follows (-200, -50, -230, -450, -255, -500).
+
 
 >//code that animates curved motion.<br/>
  	AnimatorPath path = new AnimatorPath();<br/>

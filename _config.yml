@@ -1,6 +1,6 @@
 # Site settings
 permalink: /blog/:categories/:year/:month/:day/:title.html
-title: Android Fanatic
+title: Code Karma
 email: karthik.rk18@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
