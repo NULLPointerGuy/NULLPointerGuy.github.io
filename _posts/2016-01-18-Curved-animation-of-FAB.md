@@ -23,39 +23,49 @@ In this blog post we are gonna demonstrate on how to achive the above animation.
 The android co-ordinate system is such that 0,0 is on the top left corner. (0,MaxY) is bottom left and (maxx,maxy) bottom right and right top is (Maxx,0),therfore points for the exponential curve are as follows (-200, -50, -230, -450, -255, -500).
 
 
->//code that animates curved motion.<br/>
- 	AnimatorPath path = new AnimatorPath();<br/>
- 	path.moveTo(0, 0);<br/>
- 	path.curveTo(-200, -50, -230, -450, -255, -500);<br/>
- 	final ObjectAnimator anim = ObjectAnimator.ofObject(this, "fabLoc",
- 	new PathEvaluator(), path.getPoints().toArray());<br/>
- 	anim.setInterpolator(new AccelerateDecelerateInterpolator());<br/>
- 	anim.setDuration(300);<br/>
- 	anim.start();<br/>
+{% highlight java %}
+ 	AnimatorPath path = new AnimatorPath();
+ 	path.moveTo(0, 0);
+ 	path.curveTo(-200, -50, -230, -450, -255, -500);
+ 	final ObjectAnimator anim = ObjectAnimator.ofObject(this, "fabLoc",new PathEvaluator(), path.getPoints().toArray());
+ 	anim.setInterpolator(new AccelerateDecelerateInterpolator());
+ 	anim.setDuration(300);
+ 	anim.start();
+{% endhighlight %}
 
-Now as the animator produces the new path points we need setter method that set's fab location. so define this method in your fragment.This setter will be called by the ObjectAnimator given the 'fabLoc' property string.
->public void setFabLoc(PathPoint newLoc) {<br/>
-  	mFab.setTranslationX(newLoc.mX);<br/>
-    //flag describing whether layout is revealed or not<br/>
-    if (mRevealFlag)<br/>
-        mFab.setTranslationY(newLoc.mY - (mFabSize / 2));<br/>
-    else<br/>
-        mFab.setTranslationY(newLoc.mY);<br/>
+Now as the animator produces the new path points we need setter method that set's fab location. so define this method in your fragment.This setter will be called by the ObjectAnimator given the 'fabLoc' property string as we did above.
+
+{% highlight java %}
+public void setFabLoc(PathPoint newLoc) {
+  	mFab.setTranslationX(newLoc.mX);
+    //flag describing whether layout is revealed or not
+    if (mRevealFlag)
+        mFab.setTranslationY(newLoc.mY - (mFabSize / 2));
+    else
+        mFab.setTranslationY(newLoc.mY);
  }
+{% endhighlight %}
 
-Now the second part reveal animations you have to wait until the curved animation to end and then  call reveal animation,for that purpose we can add listner which gives animation end callback.
 
->on end method of animation listner  create circular reveal animations
+Now the second part reveal animations you have to wait until the curved animation to end and then  call reveal animation, we can add listner which gives arc motion animation end callback.
+
+on end method of animation listner  create circular reveal animations using the **ViewAnimationUtils**(please note that this available only for android 5.0 and above)
+
+{% highlight java %}
 ViewAnimationUtils.createCircularReveal(revealLayout,cx,cy,0,finalRadius);
+{% endhighlight %}
 
 
 Now here the tricky part would be to reverse animate along the path (same points in the reverse order doesnt work, also i was lazy to calculate the points like how we did it to move upwards) instead extend interpolator and override the method as follows.
 
->@Override<br/>
- public float getInterpolation(float paramFloat) {<br/>
-    return Math.abs(paramFloat -1f);<br/>
+{% highlight java %}
+@Override
+ public float getInterpolation(float paramFloat) {
+    return Math.abs(paramFloat -1f);
  }
+{% endhighlight %}
 
+This is nothing but a reverse interpololator<br/>
 Find out more in detail by [visiting the project on GitHub](https://github.com/callmekarthik/AnimationsDemo).
 
 Also do check this old but awesome blog post about curve motion by [Chet Haase](http://graphics-geek.blogspot.com.es/2012/01/curved-motion-in-android.html).

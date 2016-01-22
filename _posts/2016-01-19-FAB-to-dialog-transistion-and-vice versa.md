@@ -9,7 +9,7 @@ title: FAB to dialog transistion and vice versa.
 ![ScreenShot](/img/Blog/fab2.gif)
 
 
-In this blog post we are gonna demonstrate transition between two activities,transistion was introduced in material design and as per the doc the definiation goes like this **Activity transitions in material design apps provide visual connections between different states through motion and transformations between common elements**.since we are only interested in shared transistion animations,lets focus on that for the moment.According to the developer website **shared transistion animation decides on how the views are shared during transistion**,including the following 4
+In this blog post we are gonna demonstrate transition between two activities,transistion was introduced in material design and as per the doc the definition goes like this **Activity transitions in material design apps provide visual connections between different states through motion and transformations between common elements**.According to the developer website **shared transistion animation decides on how the views are shared during transistion**,including the following 4
 
 **1.changeBounds** : change the layout border target view. <br/>
 **2.changeClipBounds** : border cropped target view. <br/>
@@ -37,28 +37,26 @@ For more info about the custom transistions visit the official [developer site](
 
 For more about drawable check the official [developer site](http://developer.android.com/reference/android/graphics/drawable/Drawable.html).
 
-Having described the classes lets check the code.
+Having described the classes,this is how we start an activity passing shared view,and transistion name along with current activity to **makeSceneTransitionAnimation** method of ActivityOptions. 
 
->Intent intent = new Intent(GoalDashboard.this, CreateGoal.class);<br/>
- ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(GoalDashboard.this, fab, getString(R.string.fabtransition));<br/>
- startActivity(intent ,options.toBundle());
+{% highlight java %}
+Intent intent = new Intent(GoalDashboard.this, CreateGoal.class);<br/>
+ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(GoalDashboard.this, fab, getString(R.string.fabtransition));<br/>
+startActivity(intent ,options.toBundle());
+{% endhighlight %}
 
-before starting the activity here we defined shared view, also remember to use the same string as that of android:transitionName of fab button.
+And in the reciving activity, in the on create method,we set the motion path along with the horizontal and vertical angle's.
 
-And in the reciving activity 
-
->ArcMotion arcMotion = new ArcMotion();
+{% highlight java %}
+ ArcMotion arcMotion = new ArcMotion();
  arcMotion.setMinimumHorizontalAngle(50f);
  arcMotion.setMinimumVerticalAngle(50f);
+{% endhighlight %}
 
-set the motion path along with the horizontal and vertical angle's.
+Creating instances of MorphFabToDialog and MorphDialogToFab  set motion path as arc motion,setSharedElementEnterTransition() and setSharedElementReturnTransition() for the getWindow() object of the Activity.
 
-
-> Interpolator easeInOut = AnimationUtils.loadInterpolator(this, android.R.interpolator.fast_out_slow_in);
-
-create instance of ease in interpolator and set it in both shared enter transistion and exit transistion, before that MorphFabToDialog and MorphDialogToFab instances and set path as arc motion, don't forget to add setSharedElementEnterTransition() and setSharedElementReturnTransition() for the getWindow() object.
-
->MorphFabToDialog sharedEnter = new MorphFabToDialog();<br/>
+ {% highlight java %}
+ MorphFabToDialog sharedEnter = new MorphFabToDialog();<br/>
  sharedEnter.setPathMotion(arcMotion);<br/>
  sharedEnter.setInterpolator(easeInOut);<br/>
  MorphDialogToFab sharedReturn = new MorphDialogToFab();<br/>
@@ -67,10 +65,30 @@ create instance of ease in interpolator and set it in both shared enter transist
  Window window = getWindow();<br/>
  window.setSharedElementEnterTransition(sharedEnter);<br/>
  window.setSharedElementReturnTransition(sharedReturn);<br/>
+ {% endhighlight %}
 
+And then we create interpolator for  both shared enter transistion and exit transistion.
+> Interpolator easeInOut = AnimationUtils.loadInterpolator(this, android.R.interpolator.fast_out_slow_in);
+
+**Please note:**We have added custom theme for the activity to appear as a dialog<br/>
+
+{% highlight xml %}
+<style name="AppTheme.Dialog" parent="AppTheme.NoActionBar">
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowBackground">@color/dialog_background_scrim</item>
+ </style>
+
+<style name="AppTheme.NoActionBar">
+   <item name="windowActionBar">false</item>
+   <item name="windowNoTitle">true</item>
+</style>
+{% endhighlight %}
+
+ which ofcourse extends AppTheme.NoActionBar <br/> dialog_background_scrim color code is #99323232
 
  To find out more in detail check this blog [post](http://hujiaweibujidao.github.io/blog/2015/12/13/Fab-and-Dialog-Morphing-Animation/)<br/>
 
+ And the source code is available [here](https://github.com/hujiaweibujidao/FabDialogMorph)<br/> 
 
 
 
