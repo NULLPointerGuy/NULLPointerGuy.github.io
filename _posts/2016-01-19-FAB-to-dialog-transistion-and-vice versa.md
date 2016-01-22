@@ -40,8 +40,8 @@ For more about drawable check the official [developer site](http://developer.and
 Having described the classes,this is how we start an activity passing shared view,and transistion name along with current activity to **makeSceneTransitionAnimation** method of ActivityOptions. 
 
 {% highlight java %}
-Intent intent = new Intent(GoalDashboard.this, CreateGoal.class);<br/>
-ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(GoalDashboard.this, fab, getString(R.string.fabtransition));<br/>
+Intent intent = new Intent(GoalDashboard.this, CreateGoal.class);
+ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(GoalDashboard.this, fab, getString(R.string.fabtransition));
 startActivity(intent ,options.toBundle());
 {% endhighlight %}
 
@@ -56,15 +56,15 @@ And in the reciving activity, in the on create method,we set the motion path alo
 Creating instances of MorphFabToDialog and MorphDialogToFab  set motion path as arc motion,setSharedElementEnterTransition() and setSharedElementReturnTransition() for the getWindow() object of the Activity.
 
  {% highlight java %}
- MorphFabToDialog sharedEnter = new MorphFabToDialog();<br/>
- sharedEnter.setPathMotion(arcMotion);<br/>
- sharedEnter.setInterpolator(easeInOut);<br/>
- MorphDialogToFab sharedReturn = new MorphDialogToFab();<br/>
- sharedReturn.setPathMotion(arcMotion);<br/>
- sharedReturn.setInterpolator(easeInOut);<br/>
- Window window = getWindow();<br/>
- window.setSharedElementEnterTransition(sharedEnter);<br/>
- window.setSharedElementReturnTransition(sharedReturn);<br/>
+ MorphFabToDialog sharedEnter = new MorphFabToDialog();
+ sharedEnter.setPathMotion(arcMotion);
+ sharedEnter.setInterpolator(easeInOut);
+ MorphDialogToFab sharedReturn = new MorphDialogToFab();
+ sharedReturn.setPathMotion(arcMotion);
+ sharedReturn.setInterpolator(easeInOut);
+ Window window = getWindow();
+ window.setSharedElementEnterTransition(sharedEnter);
+ window.setSharedElementReturnTransition(sharedReturn);
  {% endhighlight %}
 
 And then we create interpolator for  both shared enter transistion and exit transistion.
