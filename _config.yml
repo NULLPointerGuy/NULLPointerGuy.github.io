@@ -12,8 +12,6 @@ github_username: callmekarthik
 # Build settings
 markdown: kramdown
 
-# Dependencies
-highlighter:      pygments
 
 # Setup
 tagline:          'Android fanatics blog'
