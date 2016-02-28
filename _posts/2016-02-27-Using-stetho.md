@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Debuging with Stetho.
+title: Debugging with Stetho.
 ---
 
 Stetho is a debug bridge for android that enables **Chrome Developer Feature** natively for android applications.<br/>
@@ -20,7 +20,7 @@ Stetho.initialize(
 {% endhighlight %}
 
 
-Ideally the best suited HTTP library are the one's which allow you to add **network interceptors**, I would personally recommend okHttpClient.
+Ideally the best suited HTTP library are the one's which allow you to add **network interceptors**, I would personally recommend okHttpClient3.
  
 <!--break-->
 
@@ -59,15 +59,14 @@ The video gives the quickoverview on how stetho helps in monitoring network call
 
 **Note:**You can additionally view the shared preferences value and the database values using the stetho which i have not included in the video.In the sample application i have created two dummy methods.<br/> **fillDummyValuesInSharedPreferences** and **fillDummyValuesInDB**  which fills value in SharedPreferences and Realm Db just select Resources tab in the inspector, for SharedPreferences check local storages and for db check on the storage, **Realm db contents will not be shown**.<br/>
 
-
-Additionally stetho also provides **custom dumpapp plugins**, which i have not covered in this blog post.<br/>
-
 ![ScreenShot](/img/Blog/stethodb.png) 
 
 >Checkout the **source code** in [Animations demo repository](https://github.com/callmekarthik/AnimationsDemo), look into the **ImagerApp** and **Adapter class** in the repo.<br/>
 
 **For more information on stetho:**<br/> 
-please checkout Donn felker's video in [caster.io](https://caster.io/episodes/episode-4-debugging-android-with-stetho/) and also checkout the sample code in the [Stetho repo.](https://github.com/facebook/stetho)
+please checkout Donn felker's video in [caster.io](https://caster.io/episodes/episode-4-debugging-android-with-stetho/) and also checkout the sample code in the [Stetho repo.](https://github.com/facebook/stetho)<br/>
+
+Also note that stetho also provides **custom dumpapp plugins**, which i have not covered in this blog post.<br/>
 
 
 
