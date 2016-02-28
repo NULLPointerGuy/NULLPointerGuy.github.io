@@ -8,8 +8,8 @@ Stetho is a debug bridge for android that enables **Chrome Developer Feature** n
 ![ScreenShot](/img/Blog/stetho-network.gif)
 ![ScreenShot](/img/Blog/stetho-inspect1.gif)
 
-To get started, create class that extends **Application** and add it in the **name attribute** of your app's manifest file.
-Once you have done that in your onCreate method of the application intialize stetho.
+
+Intialize stetho in the onCreate method of your application class.
 
 {% highlight java %}
 Stetho.initialize(
