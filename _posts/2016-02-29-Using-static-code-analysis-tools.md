@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Debugging with static code analysis tools.
+title: Using static code analysis tools.
 ---
 **1.Facebook Infer:**
 
