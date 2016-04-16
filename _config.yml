@@ -7,7 +7,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
 twitter_username: karthikrk2		
-github_username: callmekarthik
+github_username:  karthikrk24
 
 # Build settings
 markdown: kramdown
@@ -15,7 +15,7 @@ markdown: kramdown
 
 # Setup
 tagline:          'Android fanatics blog'
-description:      'Hi ,I am <a href="http://callmekarthik.github.io/" target="_blank">karthik</a> , i work as a  software developer in Apptarix. My twitter handle is <a href="https://twitter.com/karthikrk2" target="_blank">@karthikrk2</a>.'
+description:      'Hi ,I am <a href="http://karthikrk24.github.io/" target="_blank">karthik</a> , i work as a  software developer in Apptarix. My twitter handle is <a href="https://twitter.com/karthikrk2" target="_blank">@karthikrk2</a>.'
 
 author:
   name:           'Karthik R'
