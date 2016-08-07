@@ -14,15 +14,15 @@ In this blog post i am  gonna show you how to implement smooth transition betwee
  >Activity transitions in material design apps provide visual connections between different states through motion and transformations between common elements.
   
   According to the developer website `shared transistion` animation decides on how the views are shared during transistion.
-  Android defines 4 types of transitions
-  **1.changeBounds** : 
-  change the layout border target view.
-  **2.changeClipBounds** : 
-  border cropped target view.
-  **3.changeTransform** : 
-  change the zoom target view scale, and rotation angle.
-  **4.changeImageTransform**: 
-  change target picture size and scaling.
+  Android defines 4 types of transitions<br/>
+  **1.changeBounds** : <br/>
+  change the layout border target view.<br/>
+  **2.changeClipBounds** : <br/>
+  border cropped target view.<br/>
+  **3.changeTransform** : <br/>
+  change the zoom target view scale, and rotation angle.<br/>
+  **4.changeImageTransform**: <br/>
+  change target picture size and scaling.<br/>
 
   shared elements should have one additional attribute   `android:transitionName = ""`
   so before we dive into animation,let's have a brief introduction to the classes used in the animation.
@@ -99,9 +99,9 @@ And the best part of the trick is we have added custom theme for the activity to
 
  which ofcourse extends  `AppTheme.NoActionBar`   `dialog_background_scrim` color code is `#99323232`.
  
- **More reading**
- 1.To find out more in detail check this blog [post](http://hujiaweibujidao.github.io/blog/2015/12/13/Fab-and-Dialog-Morphing-Animation/).
- 2.And the `source code` is available [here](https://github.com/hujiaweibujidao/FabDialogMorph).
+ **More reading**<br/>
+ 1.To find out more in detail check this blog [post](http://hujiaweibujidao.github.io/blog/2015/12/13/Fab-and-Dialog-Morphing-Animation/).<br/>
+ 2.And the `source code` is available [here](https://github.com/hujiaweibujidao/FabDialogMorph).<br/>
 
 
 

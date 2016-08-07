@@ -36,15 +36,15 @@ After a successful Infer run,infer-out a directory is created to store the resul
 
 ![ScreenShot](/img/Blog/infer.png) 
 
-**Structure of infer-out:**
-**1.Procs.csv and stats.json:** contain debug information about the run.
-**2.Bugs.txt, report.csv, and report.json:** contain the Infer reports in three different formats.
-**3.The log/, multicore/, and sources/ folders:** are used internally to drive the analyzer.
-**4.Captured:** contains information for each file analyzed by Infer(also see the html pages with detailed analysis if infer is used with  `debug` option).
+**Structure of infer-out:**<br/>
+**1.Procs.csv and stats.json:** contain debug information about the run.<br/>
+**2.Bugs.txt, report.csv, and report.json:** contain the Infer reports in three different formats.<br/>
+**3.The log/, multicore/, and sources/ folders:** are used internally to drive the analyzer.<br/>
+**4.Captured:** contains information for each file analyzed by Infer(also see the html pages with detailed analysis if infer is used with  `debug` option).<br/>
 
 Checkout my [sample app](https://github.com/callmekarthik/Playground-App) that has infer-out folder along with the html pages with detailed analysis inside captured folder.
 
-**2.Android Lint:**
+**2.Android Lint:**<br/>
 This tool checks your Android project source files for potential bugs and optimization improvements for correctness.
 This is inbuilt tool in Android Studio, and it automatically runs once you compile the code,you can also run it manually by right clicking in the IDE **Analyze > Inspect Code**, moreover you can also analyze dependencies, cyclic dependencies etc.
 You can also invoke this through command line.
@@ -57,9 +57,9 @@ i personally feel lint in a way is more advanced and consider's more paramters i
 
 The optimization tips in the lint-results.html will take all the paramters(such as Security,Performance,Overdraw,Unused resources etc) into the consideration.
 
-**More reading**
-1.For more details about the [Lint](http://developer.android.com/tools/help/lint.html) visit the developer website.
-2.You can also build  `Custom Lint` checks if you think that built-in Lint checks are not enough,get started by visiting this [blog post](https://lab.getbase.com/custom-lint-checks-part-1/).
+**More reading**<br/>
+1.For more details about the [Lint](http://developer.android.com/tools/help/lint.html) visit the developer website.<br/>
+2.You can also build  `Custom Lint` checks if you think that built-in Lint checks are not enough,get started by visiting this [blog post](https://lab.getbase.com/custom-lint-checks-part-1/).<br/>
 
 
 

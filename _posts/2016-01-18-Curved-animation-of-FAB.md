@@ -10,16 +10,16 @@ This blog post demonstrates on how to implement curved FAB motion and add circul
 We will split the animation into arc motion animation and circular reveal animation, the arc motion animation is achived based on the concept of [bezire curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve).
 There is also an awesome sample repo by saulmm that demonstrates curved motion of [fab](https://github.com/saulmm/Curved-Fab-Reveal-Example).<br/>
 I will give you an overview of few classes that i used from the repo.
-**1.PathPoint.java**:
+**1.PathPoint.java**:<br/>
 A class that holds information about a location and how the path should get to that location from the previous path location (if any). 
-Any PathPoint holds the information for its location as well as the instructions on how to traverse the preceding interval from the previous location. 
-**2.AnimatorPath.java**:
+Any PathPoint holds the information for its location as well as the instructions on how to traverse the preceding interval from the previous location.<br/> 
+**2.AnimatorPath.java**:<br/>
 Class that contains the list of pathpoint objects for a given curve,
-also specifies type motion either discontinous move to ,straight path or curve to motions of the fab to the given point.
-**3.PathEvaluator.java**:
+also specifies type motion either discontinous move to ,straight path or curve to motions of the fab to the given point.<br/>
+**3.PathEvaluator.java**:<br/>
 This evaluator interpolates between two PathPoint values given the value t, the proportion traveled between those points. 
 The value of the interpolation depends on the operation specified by the endValue (the operation for the interval between PathPoints is always specified by the end point of that interval).
-basically responsible for calculating the cureved bezire path points.
+basically responsible for calculating the cureved bezire path points.<br/>
 
 The android co-ordinate system is such that 0,0 is on the top left corner. 
 (0,MaxY) is bottom left and (maxx,maxy) bottom right and right top is (Maxx,0).
@@ -56,7 +56,7 @@ public void setFabLoc(PathPoint newLoc) {
   Then  call reveal animation, we can add listner which gives arc motion animation end callback.
   on end method of animation listner  create circular reveal animations using the  `ViewAnimationUtils`
   
-  **Note:**
+  **Note:**<br/>
   please note that `ViewAnimationUtils` available only for android 5.0 and above
 
   {% highlight java %}
@@ -75,10 +75,10 @@ instead extend interpolator and override the method as follows.
  }
 {% endhighlight %}
 
-**Note**:
-this kind of fab animation will be useful when you want to animate the fab in the fragment or maybe inside one single activity without transitions.
+**Note**:<br/>
+this kind of fab animation will be useful when you want to animate the fab in the fragment or maybe inside one single activity without transitions.<br/>
 In case of the activity transition animation please follow my next blog post where we can achive it using transitions by moving from one activity to another.<br/>
 
- **More reading:**
-1.Find out more in detail by [visiting the project on GitHub](https://github.com/callmekarthik/AnimationsDemo).
-2.Do check this old but awesome blog post about curve motion by [Chet Haase](http://graphics-geek.blogspot.com.es/2012/01/curved-motion-in-android.html).
+ **More reading:**<br/>
+1.Find out more in detail by [visiting the project on GitHub](https://github.com/callmekarthik/AnimationsDemo).<br/>
+2.Do check this old but awesome blog post about curve motion by [Chet Haase](http://graphics-geek.blogspot.com.es/2012/01/curved-motion-in-android.html).<br/>

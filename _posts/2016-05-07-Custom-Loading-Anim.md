@@ -17,7 +17,7 @@ Hence i will use car icons for loading icons.
 ![ScreenShot](/img/Blog/carloading.gif)
 
 
-**Implementation part:**
+**Implementation part:**<br/>
 Create a class called  `CarLoadingView` which extends Linear Layout, now define two constructors one is to create view through xml and the latter one is programmatically in java.
 
 {% highlight java %}
@@ -138,7 +138,7 @@ and last but not the least don't forget to add custom view in the activity layou
         android:layout_centerHorizontal="true"/>
  {% endhighlight %}
  
- **More reading**
+ **More reading**<br/>
  you can find the source code [here.](https://github.com/NULLPointerGuy/CustomLoadingView)
 
 
