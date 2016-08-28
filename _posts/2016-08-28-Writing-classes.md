@@ -1,6 +1,7 @@
 ---
-title: Writing Classes in Android(part-1).
+title: Writing Classes in Android.
 ---
+**Part 1:**
 Blog post is inspired from the Steve McConnell's `working classes` chapter from the book `Code Complete 2`, this post discusses few of the principles and on how to apply those principles while writing android application.
 
 <!--more-->
