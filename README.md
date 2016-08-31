@@ -1,2 +1,2 @@
 # NULLPointerGuy.github.io
-My blog
+My personal blog
