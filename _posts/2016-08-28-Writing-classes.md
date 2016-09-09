@@ -55,7 +55,5 @@ Blog post is inspired from the Steve McConnell's `working classes` chapter from 
  }
 {% endhighlight %}
 
-Same reason holds good, as of why i added `setTitle` routine in the base class. 
-
-More principles will be discussed in my next post, until then `keep calm and debug`.
+Same reason holds good, as of why i added `setTitle` routine in the base class.
 
