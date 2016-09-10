@@ -39,6 +39,8 @@ Blog post is inspired from the Steve McConnell's `working classes` chapter from 
 
  Not only we hide the unneccessary implementation details of making network calls, but also unneccessary `repeation` of network client object in each class, which brings us to another principle called `dry`(do not repeat yourself).
 
+ **Rule of thumb:** make sure you use inheritance to avoid code duplication.
+
  **Please Note:**<br/>I could have easily choose an interface, with abstract method  `makeNetworkCall` and made every class implement the interface, then each of my class need to have an network client object(which often results in code duplicity) it's also silly to assume that each of three class would have different implementation or different network client types, hence i `strongly coupled` it with the base class.
  Also it withholds `Liskov substitution principle` discussed above.
 
