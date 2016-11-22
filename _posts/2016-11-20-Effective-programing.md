@@ -53,7 +53,7 @@ Any test is better than no test, but the ultimate unit testing is if the user ca
 
 
 **Note:**
-At the end it had been an awesome experience reading the book, i have skipped through many sections so i personally suggest you to get your copy [today](https://www.amazon.com/Effective-Programming-More-Than-Writing-ebook/dp/B008HUMTO0?ie=UTF8&keywords=Effective%20programming&qid=1479779562&ref_=sr_1_1&sr=8-1).
+At the end, it had been an awesome experience reading the book, i have skipped through many sections of the book, so i personally suggest you to get your copy [today](https://www.amazon.com/Effective-Programming-More-Than-Writing-ebook/dp/B008HUMTO0?ie=UTF8&keywords=Effective%20programming&qid=1479779562&ref_=sr_1_1&sr=8-1).
 
 
 
