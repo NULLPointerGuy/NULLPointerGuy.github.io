@@ -52,9 +52,5 @@ Start with UI development,before you start writing all the business logic for th
 Any test is better than no test, but the ultimate unit testing is if the user can get his `workdone` using your application, if the user can't figure out how to use your application then that is `ultimate` unit test fail.
 
 
-**Note:**
-At the end, it had been an awesome experience reading the book, i have skipped through many sections of the book, so i personally suggest you to get your copy [today](https://www.amazon.com/Effective-Programming-More-Than-Writing-ebook/dp/B008HUMTO0?ie=UTF8&keywords=Effective%20programming&qid=1479779562&ref_=sr_1_1&sr=8-1).
-
-
 
 
