@@ -3,8 +3,8 @@ layout: page
 title: About
 ---
 
-Hi there! my name is karthik, i am a programmer based in bangalore.
-Although i am an android fanatic, i have also worked with the front end web frameworks like Angular JS and JQuery. 
+Hi there! my name is Karthik, I am a developer based in Bangalore.
+Although I spend most of my time in debugging/developing Android applications, I have also done few experimentations with react-native.
 
 ---
 
