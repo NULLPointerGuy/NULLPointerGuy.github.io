@@ -8,13 +8,13 @@ description:
   meta: Hi there! my name is karthik and i am a software developer with keen interest in mobile application development.
 
   # Description of your site. This will show up on the front page.
-  subtitle: 
+  subtitle:
 
 author:
   name: karthik rk
 
   # Necessary for contact page
-  email: karthik.rk18@gmail.com 
+  email: karthik.rk18@gmail.com
 
   # Optional text (html) to display after author name. Leave empty if you don't
   # want it.
@@ -37,7 +37,7 @@ lang: en
 show-subtitle: true
 display-social-icons: false
 
-footer-text: Copywright 2016.<br><a href="https://twitter.com/karthikrk2">@karthikrk2</a> is my twitter handle.
+footer-text: Copywright 2018.<br><a href="https://twitter.com/karthikrk2">@karthikrk2</a> is my twitter handle.
 
 # Preferably 64px in height. Leave empty = disable.
 logo-image: # /img/logo.png
