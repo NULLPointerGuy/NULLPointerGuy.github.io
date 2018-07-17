@@ -3,6 +3,8 @@ title: Using object keyword in kotlin.
 ---
 In this post, we'll understand the usage of **object** keyword in  kotlin
 
+<!--more-->
+
 Object key word in kotlin literally means the `object of the class`, now this keyword can be used in three different scenarios.
 1.As a expression.
 2.As a declaration.
