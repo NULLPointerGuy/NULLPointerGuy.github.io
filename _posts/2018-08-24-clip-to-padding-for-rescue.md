@@ -27,7 +27,7 @@ clipToPadding = false
 
 ![ScreenShot](/img/Blog/clipfalse.png)
 Whereas clipToPadding = true
- The shadow is clipped when it crosses the view bounds.
+ The shadow is clipped when it crosses the view bounds.<br/>
 <sub><sup>*image credits Samuel Peter.</sup></sub>
 
 
