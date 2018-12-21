@@ -1,6 +1,7 @@
 ---
-title: @Processor vs AOP.
+title: Annotation Processor vs AOP.
 ---
+
 Blog post on when to use @processor vs aop(aspect oriented programming).
 
 <!--more-->
