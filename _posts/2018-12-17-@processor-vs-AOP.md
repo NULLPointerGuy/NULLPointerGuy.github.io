@@ -46,6 +46,6 @@ as summarised in the example below.
 {% endhighlight %}
 
 
-**More resources on AOP**
-1.[Java Method Logging with AOP](https://www.yegor256.com/2014/06/01/aop-aspectj-java-method-logging.html).
+**More resources on AOP**<br/>
+1.[Java Method Logging with AOP](https://www.yegor256.com/2014/06/01/aop-aspectj-java-method-logging.html).<br/>
 2.[AOP in Android](https://fernandocejas.com/2014/08/03/aspect-oriented-programming-in-android/)
