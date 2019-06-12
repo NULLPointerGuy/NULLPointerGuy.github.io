@@ -1,0 +1,37 @@
+---
+title: Effectively using Lazy.
+---
+Effectively using property delegation function `lazy` in kotlin.
+
+<!--more-->
+
+We all know kotlin's standard delegation function `lazy` which lazily initialises our object, let's say you have condition if this object is initialised you need to either dispose the resources.
+
+Now normally we would do the following
+{% highlight kotlin %}
+
+  val resource<T> by lazy<T> {
+    //lazy initialisation logic
+  }
+{% endhighlight %}
+
+and when we need to  dispose resource we would do
+{% highlight kotlin %}
+  resource.dispose()
+{% endhighlight %}
+
+
+But there is catch this would internally run the `lazy initialisation logic` and then dispose the resource, we are unnecessarily initialising and then disposing.
+
+Instead we can use a public method that lazy interface provides, by this we are effectively using the lazy property delegation.
+
+{% highlight kotlin %}
+  if(resource.isInitialized()){
+     resource.dispose()  
+  }
+{% endhighlight %}
+
+
+**More reading**:
+[Lazy interface doc](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-lazy/).
+[How lazy-initialization work](https://medium.com/til-kotlin/how-kotlins-delegated-properties-and-lazy-initialization-work-552cbad8be60)
