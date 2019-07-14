@@ -26,7 +26,9 @@ But there is catch this would internally run the `lazy initialisation logic` and
 Instead we can use a public method that lazy interface provides, by this we are effectively using the lazy property delegation.
 
 {% highlight kotlin %}
-  if(resource.isInitialized()){
+  val  resourceDelegate = lazy { /** resource initialising **/}
+  val resource:ResourceType by resourceDelegate
+  if(resourceDelegate.isInitialized()){
      resource.dispose()  
   }
 {% endhighlight %}
