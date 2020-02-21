@@ -6,7 +6,9 @@ categories: [android]
 ---
 This blog post demonstrates on how to implement curved FAB motion and add circular reveal animation to it.
 
-![ScreenShot](https://github.com/NULLPointerGuy/NULLPointerGuy.github.io/blob/master/static/img/_posts/fab1.gif)
+![ScreenShot](https://raw.githubusercontent.com/NULLPointerGuy/NULLPointerGuy.github.io/master/static/img/_posts/fab1.gif)
+
+
 We will split the animation into arc motion animation and circular reveal animation, the arc motion animation is achived based on the concept of [bezire curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve).
 There is also an awesome sample repo by saulmm that demonstrates curved motion of [fab](https://github.com/saulmm/Curved-Fab-Reveal-Example).<br/>
 I will give you an overview of few classes that i used from the repo.

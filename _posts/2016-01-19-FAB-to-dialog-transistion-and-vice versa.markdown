@@ -7,7 +7,7 @@ categories: [android]
 ---
 In this blog post i am  gonna show you how to implement smooth transition between dialog and a fab,similar to Nick Butcher's famous `Plaid app`.
 
-![ScreenShot](https://github.com/NULLPointerGuy/NULLPointerGuy.github.io/blob/master/static/img/_posts/fab2.gif)
+![ScreenShot](https://raw.githubusercontent.com/NULLPointerGuy/NULLPointerGuy.github.io/master/static/img/_posts/fab2.gif)
 
 
   Fab to dialog transition is achieved by having transition between two activities.

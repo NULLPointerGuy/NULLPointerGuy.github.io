@@ -11,13 +11,13 @@ Progress bars let the user know that the device is busy, and in particular the i
 we can always improve this experience by adding our own custom loading screen, to see how this works lets take example of this sample application(Let's call it taxi sure, which helps you rent taxi) that has a simple splash screen activity.
 first let's see how the application splash screens looks with the oridnary dull indeterminate progress(circular).
 
-![ScreenShot](https://github.com/NULLPointerGuy/NULLPointerGuy.github.io/blob/master/static/img/_posts/customloadingview.gif)
+![ScreenShot](https://raw.githubusercontent.com/NULLPointerGuy/NULLPointerGuy.github.io/master/static/img/_posts/customloadingview.gif)
 
 
 Now let's try some custom indeterminate progress view, let's assume app is about  `renting cars`.
 Hence i will use car icons for loading icons.
 
-![ScreenShot](https://github.com/NULLPointerGuy/NULLPointerGuy.github.io/blob/master/static/img/_posts/carloading.gif)
+![ScreenShot](https://raw.githubusercontent.com/NULLPointerGuy/NULLPointerGuy.github.io/master/static/img/_posts/carloading.gif)
 
 
 **Implementation part:**<br/>
