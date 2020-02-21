@@ -35,7 +35,7 @@ If you get error saying infer command not found re-compile the infer using `./bu
 In case the error still persists then infer is not compiled properly, this might be due to the reason that all dependencies are not installed in your computer.
 After a successful Infer run,infer-out a directory is created to store the results of the analysis.
 
-![ScreenShot](/img/Blog/infer.png)
+![ScreenShot](https://github.com/NULLPointerGuy/NULLPointerGuy.github.io/blob/master/static/img/_posts/infer.png)
 
 **Structure of infer-out:**<br/>
 **1.Procs.csv and stats.json:** contain debug information about the run.<br/>
@@ -54,7 +54,7 @@ You can also invoke this through command line.
 And the Lint results will be a html page in the  `mobile/build/outputs/lint-results.html`.
 i personally feel lint in a way is more advanced and consider's more paramters into the account while dumping the results in the  `lint-results.html`.
 
-![ScreenShot](/img/Blog/lint.png)
+![ScreenShot](https://github.com/NULLPointerGuy/NULLPointerGuy.github.io/blob/master/static/img/_posts/lint.png)
 
 The optimization tips in the lint-results.html will take all the paramters(such as Security,Performance,Overdraw,Unused resources etc) into the consideration.
 

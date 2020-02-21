@@ -6,8 +6,8 @@ categories: [android]
 ---
 Stetho is facebook open sourced debug tool that brings in `chrome developer features` natively for android applications with the help of okhttp interceptors.
 
-![ScreenShot](/img/Blog/stetho-network.gif)
-![ScreenShot](/img/Blog/stetho-inspect1.gif)
+![ScreenShot](https://github.com/NULLPointerGuy/NULLPointerGuy.github.io/blob/master/static/img/_posts/stetho-network.gif)
+![ScreenShot](https://github.com/NULLPointerGuy/NULLPointerGuy.github.io/blob/master/static/img/_posts/stetho-inspect1.gif)
 
 
 To get started add dependency in your gradle file and intialize stetho in the onCreate method of your application class.
@@ -61,9 +61,8 @@ The `video` gives the quickoverview on how stetho helps in monitoring network ca
  In the sample application i have created two dummy methods.`fillDummyValuesInSharedPreferences` and `fillDummyValuesInDB` which fills value in SharedPreferences.
  `Realm db` contents will not be shown,while shared preferences will be shown under `local storage` option, and also note that stetho also provides `custom dumpapp plugins`, which i have not covered in this blog post.
 
-![ScreenShot](/img/Blog/stethodb.png)
+![ScreenShot](https://github.com/NULLPointerGuy/NULLPointerGuy.github.io/blob/master/static/img/_posts/stethodb.png)
 
 **More reading:**<br/>
-1.The source code in [Animations demo repository](https://github.com/callmekarthik/AnimationsDemo), look into the `ImagerApp` and `Adapter class` in the repo.<br/>
-2.Also there is awesome screencast by Donn felker called [caster.io](https://caster.io/episodes/episode-4-debugging-android-with-stetho/).<br/>
-3.Do checkout the sample code in the [stetho repo](https://github.com/facebook/stetho).<br/>
+1.Also there is awesome screencast by Donn felker called [caster.io](https://caster.io/episodes/episode-4-debugging-android-with-stetho/).<br/>
+2.Do checkout the sample code in the [stetho repo](https://github.com/facebook/stetho).<br/>

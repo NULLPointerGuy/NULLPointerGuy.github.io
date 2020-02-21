@@ -13,19 +13,19 @@ Below images depicts better than any documentation.
 
 **In case of RecyclerView:**
 
-![ScreenShot](/img/Blog/recyclerview.gif)
+![ScreenShot](https://github.com/NULLPointerGuy/NULLPointerGuy.github.io/blob/master/static/img/_posts/recyclerview.gif)
 <sub><sup>*image credits pulpfiction.</sup></sub>
 
 **In case of Fab button:**
 
-![ScreenShot](/img/Blog/fab.png)
+![ScreenShot](https://github.com/NULLPointerGuy/NULLPointerGuy.github.io/blob/master/static/img/_posts/fab.png)
 
-![ScreenShot](/img/Blog/cliptrue.png)
+![ScreenShot](https://github.com/NULLPointerGuy/NULLPointerGuy.github.io/blob/master/static/img/_posts/cliptrue.png)
 clipToPadding = false
  The shadow is drawn evenly, even if it exceeds the view bounds.
 
 
-![ScreenShot](/img/Blog/clipfalse.png)
+![ScreenShot](https://github.com/NULLPointerGuy/NULLPointerGuy.github.io/blob/master/static/img/_posts/clipfalse.png)
 Whereas clipToPadding = true
  The shadow is clipped when it crosses the view bounds.<br/>
 <sub><sup>*image credits Samuel Peter.</sup></sub>
