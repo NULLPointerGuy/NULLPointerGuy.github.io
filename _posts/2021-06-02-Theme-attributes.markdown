@@ -22,6 +22,7 @@ That is
 
  instead of the above i should have been doing
 
+{% highlight xml %}
  <TextView
    ...
    android:style="?CaptionText.Strong"
